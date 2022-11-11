@@ -14,5 +14,4 @@ root.render(
   <React.StrictMode>
     <TodoContainer /> 
   </React.StrictMode>, 
-  document.getElementById("root")
 );
