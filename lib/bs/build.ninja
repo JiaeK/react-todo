@@ -1,0 +1,30 @@
+rescript = 1
+g_finger := /home/jiae/rs/rescript-react-todo/node_modules/@rescript/react/lib/ocaml/install.stamp
+g_finger := /home/jiae/rs/rescript-react-todo/node_modules/rescript-uuid/lib/ocaml/install.stamp
+rule astj
+  command = /home/jiae/rs/rescript-react-todo/node_modules/rescript/linux/bsc.exe  -bs-v 10.0.1 -bs-jsx 3  -absname -bs-ast -o $out $i
+o src/Test.ast : astj ../../src/Test.res
+rule deps
+  command = /home/jiae/rs/rescript-react-todo/node_modules/rescript/linux/bsb_helper.exe -hash 420a3d17b50094300732fea15ebc1a17 $in
+  restat = 1
+o src/Test.d : deps src/Test.ast
+rule mij
+  command = /home/jiae/rs/rescript-react-todo/node_modules/rescript/linux/bsc.exe -I src/functionBased/components -I src/functionBased/pages -I src/functionBased -I src -I /home/jiae/rs/rescript-react-todo/node_modules/@rescript/react/lib/ocaml -I /home/jiae/rs/rescript-react-todo/node_modules/rescript-uuid/lib/ocaml   -bs-package-name 'ReScript React TODO app' -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  dyndep = 1
+  restat = 1
+o src/Test.cmj src/Test.cmi ../../src/Test.bs.js : mij src/Test.ast
+o src/Header.ast : astj ../../src/Header.res
+o src/Header.d : deps src/Header.ast
+o src/Header.cmj src/Header.cmi ../../src/Header.bs.js : mij src/Header.ast
+o src/TodoItem.ast : astj ../../src/TodoItem.res
+o src/TodoItem.d : deps src/TodoItem.ast
+o src/TodoItem.cmj src/TodoItem.cmi ../../src/TodoItem.bs.js : mij src/TodoItem.ast
+o src/InputTodo.ast : astj ../../src/InputTodo.res
+o src/InputTodo.d : deps src/InputTodo.ast
+o src/InputTodo.cmj src/InputTodo.cmi ../../src/InputTodo.bs.js : mij src/InputTodo.ast
+o src/TodosList.ast : astj ../../src/TodosList.res
+o src/TodosList.d : deps src/TodosList.ast
+o src/TodosList.cmj src/TodosList.cmi ../../src/TodosList.bs.js : mij src/TodosList.ast
+o src/TodoContainer.ast : astj ../../src/TodoContainer.res
+o src/TodoContainer.d : deps src/TodoContainer.ast
+o src/TodoContainer.cmj src/TodoContainer.cmi ../../src/TodoContainer.bs.js : mij src/TodoContainer.ast

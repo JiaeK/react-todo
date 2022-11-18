@@ -1,0 +1,30 @@
+rescript = 1
+rule cp
+  command = cp $i $out
+rule touch
+ command = touch $out
+o Test.cmi : cp ../bs/src/Test.cmi
+o Test.cmj : cp ../bs/src/Test.cmj
+o Test.cmt : cp ../bs/src/Test.cmt
+o Test.res : cp ../../src/Test.res
+o Header.cmi : cp ../bs/src/Header.cmi
+o Header.cmj : cp ../bs/src/Header.cmj
+o Header.cmt : cp ../bs/src/Header.cmt
+o Header.res : cp ../../src/Header.res
+o TodoItem.cmi : cp ../bs/src/TodoItem.cmi
+o TodoItem.cmj : cp ../bs/src/TodoItem.cmj
+o TodoItem.cmt : cp ../bs/src/TodoItem.cmt
+o TodoItem.res : cp ../../src/TodoItem.res
+o InputTodo.cmi : cp ../bs/src/InputTodo.cmi
+o InputTodo.cmj : cp ../bs/src/InputTodo.cmj
+o InputTodo.cmt : cp ../bs/src/InputTodo.cmt
+o InputTodo.res : cp ../../src/InputTodo.res
+o TodosList.cmi : cp ../bs/src/TodosList.cmi
+o TodosList.cmj : cp ../bs/src/TodosList.cmj
+o TodosList.cmt : cp ../bs/src/TodosList.cmt
+o TodosList.res : cp ../../src/TodosList.res
+o TodoContainer.cmi : cp ../bs/src/TodoContainer.cmi
+o TodoContainer.cmj : cp ../bs/src/TodoContainer.cmj
+o TodoContainer.cmt : cp ../bs/src/TodoContainer.cmt
+o TodoContainer.res : cp ../../src/TodoContainer.res
+build install.stamp : touch Test.cmi Test.cmj Header.cmi Header.cmj TodoItem.cmi TodoItem.cmj InputTodo.cmi InputTodo.cmj TodosList.cmi TodosList.cmj TodoContainer.cmi TodoContainer.cmj 

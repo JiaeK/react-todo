@@ -1,0 +1,21 @@
+{
+    "name": "ReScript React TODO app",
+    "sources": [
+      {
+        "dir": "src", 
+        "subdirs": true
+      }
+    ],
+    "package-specs": [
+      {
+        "module": "es6",
+        "in-source": true
+      }
+    ],
+    "suffix": ".bs.js",
+    "reason": { "react-jsx": 3 },
+    "bs-dependencies": [
+      "@rescript/react", 
+      "rescript-uuid"
+    ]
+  }
