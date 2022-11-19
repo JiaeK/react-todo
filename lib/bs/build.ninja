@@ -5,14 +5,17 @@ rule astj
   command = /home/jiae/rs/rescript-react-todo/node_modules/rescript/linux/bsc.exe  -bs-v 10.0.1 -bs-jsx 3  -absname -bs-ast -o $out $i
 o src/Test.ast : astj ../../src/Test.res
 rule deps
-  command = /home/jiae/rs/rescript-react-todo/node_modules/rescript/linux/bsb_helper.exe -hash 420a3d17b50094300732fea15ebc1a17 $in
+  command = /home/jiae/rs/rescript-react-todo/node_modules/rescript/linux/bsb_helper.exe -hash 80654fc32c9c02af3067f6ed3de03f41 $in
   restat = 1
 o src/Test.d : deps src/Test.ast
 rule mij
-  command = /home/jiae/rs/rescript-react-todo/node_modules/rescript/linux/bsc.exe -I src/functionBased/components -I src/functionBased/pages -I src/functionBased -I src -I /home/jiae/rs/rescript-react-todo/node_modules/@rescript/react/lib/ocaml -I /home/jiae/rs/rescript-react-todo/node_modules/rescript-uuid/lib/ocaml   -bs-package-name 'ReScript React TODO app' -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  command = /home/jiae/rs/rescript-react-todo/node_modules/rescript/linux/bsc.exe -I src/functionBased/components -I src/functionBased -I src -I /home/jiae/rs/rescript-react-todo/node_modules/@rescript/react/lib/ocaml -I /home/jiae/rs/rescript-react-todo/node_modules/rescript-uuid/lib/ocaml   -bs-package-name 'ReScript React TODO app' -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
   dyndep = 1
   restat = 1
 o src/Test.cmj src/Test.cmi ../../src/Test.bs.js : mij src/Test.ast
+o src/index.ast : astj ../../src/index.res
+o src/index.d : deps src/index.ast
+o src/index.cmj src/index.cmi ../../src/index.bs.js : mij src/index.ast
 o src/Header.ast : astj ../../src/Header.res
 o src/Header.d : deps src/Header.ast
 o src/Header.cmj src/Header.cmi ../../src/Header.bs.js : mij src/Header.ast

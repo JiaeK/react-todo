@@ -7,6 +7,10 @@ o Test.cmi : cp ../bs/src/Test.cmi
 o Test.cmj : cp ../bs/src/Test.cmj
 o Test.cmt : cp ../bs/src/Test.cmt
 o Test.res : cp ../../src/Test.res
+o index.cmi : cp ../bs/src/index.cmi
+o index.cmj : cp ../bs/src/index.cmj
+o index.cmt : cp ../bs/src/index.cmt
+o index.res : cp ../../src/index.res
 o Header.cmi : cp ../bs/src/Header.cmi
 o Header.cmj : cp ../bs/src/Header.cmj
 o Header.cmt : cp ../bs/src/Header.cmt
@@ -27,4 +31,4 @@ o TodoContainer.cmi : cp ../bs/src/TodoContainer.cmi
 o TodoContainer.cmj : cp ../bs/src/TodoContainer.cmj
 o TodoContainer.cmt : cp ../bs/src/TodoContainer.cmt
 o TodoContainer.res : cp ../../src/TodoContainer.res
-build install.stamp : touch Test.cmi Test.cmj Header.cmi Header.cmj TodoItem.cmi TodoItem.cmj InputTodo.cmi InputTodo.cmj TodosList.cmi TodosList.cmj TodoContainer.cmi TodoContainer.cmj 
+build install.stamp : touch Test.cmi Test.cmj index.cmi index.cmj Header.cmi Header.cmj TodoItem.cmi TodoItem.cmj InputTodo.cmi InputTodo.cmj TodosList.cmi TodosList.cmj TodoContainer.cmi TodoContainer.cmj 
