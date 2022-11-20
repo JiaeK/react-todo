@@ -1,8 +1,7 @@
-#Start(1668853356745)
+#Start(1668961648800)
 Fatal error: exception Invalid_argument("react.component calls cannot be destructured.")
 Fatal error: exception Invalid_argument("react.component calls cannot be destructured.")
 Fatal error: exception Invalid_argument("react.component calls cannot be destructured.")
 Fatal error: exception Invalid_argument("react.component calls cannot be destructured.")
-Fatal error: exception Invalid_argument("react.component calls can only be on function definitions or component wrappers (forwardRef, memo).")
 FAILED: cannot make progress due to previous errors.
-#Done(1668853356777)
+#Done(1668961648828)
